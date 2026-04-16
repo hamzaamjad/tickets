@@ -2,7 +2,7 @@
 id: FEAT-001
 title: "Add TASK template to references/templates.md"
 type: feature
-status: to-do
+status: done
 priority: high
 created: 2026-04-16
 updated: 2026-04-16
