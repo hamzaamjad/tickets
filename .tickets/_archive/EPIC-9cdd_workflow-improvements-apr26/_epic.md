@@ -2,7 +2,7 @@
 id: EPIC-9cdd
 title: "Ticket workflow improvements (Apr 2026 synthesis)"
 type: epic
-status: to-do
+status: done
 priority: high
 branch: epic/9cdd/workflow-improvements-apr26
 created: 2026-04-16

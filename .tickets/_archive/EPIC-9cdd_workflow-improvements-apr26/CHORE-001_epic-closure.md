@@ -2,7 +2,7 @@
 id: CHORE-001
 title: "Epic closure: archive, delete orchestration prompt, clean worktree"
 type: chore
-status: to-do
+status: done
 priority: high
 created: 2026-04-16
 updated: 2026-04-16
