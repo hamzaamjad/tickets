@@ -2,7 +2,7 @@
 id: FEAT-002
 title: "Orchestrator review-and-merge protocol"
 type: feature
-status: to-do
+status: done
 priority: high
 created: 2026-04-16
 updated: 2026-04-16
