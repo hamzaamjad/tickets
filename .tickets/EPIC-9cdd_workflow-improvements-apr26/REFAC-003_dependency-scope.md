@@ -2,7 +2,7 @@
 id: REFAC-003
 title: "Specify dependency ID resolution scope"
 type: refactor
-status: to-do
+status: done
 priority: medium
 created: 2026-04-16
 updated: 2026-04-16
@@ -123,7 +123,9 @@ actual=$(grep -c 'bare IDs resolve within current epic; cross-epic: EPIC-<hex>/T
 [ "$expected" = "$actual" ]
 
 # AC-3: Epic template has no dependencies field
-[ "$(awk '/^## Epic$/,/^## /' "$TEMPLATES" | grep -c 'dependencies:')" = "0" ]
+# (flag-form awk; the `/start/,/end/` form with both patterns matching `^## `
+# captures only the start line itself.)
+[ "$(awk '/^## Epic$/{flag=1;next} /^## /{flag=0} flag' "$TEMPLATES" | grep -c 'dependencies:')" = "0" ]
 ```
 
 ## Notes
