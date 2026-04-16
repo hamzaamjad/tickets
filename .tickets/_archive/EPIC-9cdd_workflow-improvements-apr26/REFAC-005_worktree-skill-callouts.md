@@ -2,7 +2,7 @@
 id: REFAC-005
 title: "SKILL.md callouts + worktree serialization guard (E2)"
 type: refactor
-status: to-do
+status: done
 priority: medium
 created: 2026-04-16
 updated: 2026-04-16

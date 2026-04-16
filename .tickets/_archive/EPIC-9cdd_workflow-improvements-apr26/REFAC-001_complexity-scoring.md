@@ -2,7 +2,7 @@
 id: REFAC-001
 title: "Complexity-scored two-layer decomposition policy"
 type: refactor
-status: to-do
+status: done
 priority: high
 created: 2026-04-16
 updated: 2026-04-16

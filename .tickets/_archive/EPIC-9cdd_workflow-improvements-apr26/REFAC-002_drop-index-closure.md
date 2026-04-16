@@ -2,7 +2,7 @@
 id: REFAC-002
 title: "Remove docs/INDEX.md references from closure workflow"
 type: refactor
-status: to-do
+status: done
 priority: medium
 created: 2026-04-16
 updated: 2026-04-16
@@ -121,7 +121,9 @@ TEMPLATES=.claude/skills/ticket-workflow/references/templates.md
 [ "$(grep -c 'INDEX.md' "$TEMPLATES")" = "0" ]
 
 # AC-4: closure list has exactly five numbered items
-[ "$(awk '/^## Epic Closure Ticket$/,/^## /' "$SKILL" | grep -cE '^[0-9]+\. \*\*')" = "5" ]
+# (flag-form awk; the literal `/start/,/end/` form in the plan would match
+# its own start pattern on both endpoints and return just the header line.)
+[ "$(awk '/^## Epic Closure Ticket$/{flag=1;next} /^## /{flag=0} flag' "$SKILL" | grep -cE '^[0-9]+\. \*\*')" = "5" ]
 
 # Sanity: each of the five surviving action verbs is still present
 grep -q "status: done" "$SKILL"
